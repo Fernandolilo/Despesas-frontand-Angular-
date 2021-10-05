@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 
 
+
 @NgModule({
   declarations: [AppComponent, LoginComponent],
   imports: [
@@ -24,8 +25,7 @@ import { HttpClientModule} from '@angular/common/http'
     CardModule,
     InputTextModule,
     ButtonModule,
-    PasswordModule
-    
+    PasswordModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
