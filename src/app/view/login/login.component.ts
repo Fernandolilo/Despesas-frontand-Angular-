@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestLogin } from 'src/app/resources/RequestLogin';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  public requestLogin: RequestLogin = new RequestLogin;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.requestLogin;
   }
 
+  public doLogin(): void{
+    console.log(this.requestLogin)
+  }
 }
