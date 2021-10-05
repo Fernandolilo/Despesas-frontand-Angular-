@@ -2,7 +2,7 @@
 
 export class RequestLogin {
 
-    public login: string;
-    public password: string;
+    public email!: string;
+    public senha!: string;
     
 }

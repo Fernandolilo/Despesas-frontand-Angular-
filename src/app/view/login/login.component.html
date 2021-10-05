@@ -19,12 +19,12 @@
             <i class="fas fa-comments-dollar fa-4x" style="color: rgb(3, 3, 177);"></i>
             <p>Controle de despesas</p>
             <label for="float-input">Usuário</label>
-            <input id="float-input" type="text" pInputText  [(ngModel)]="requestLogin.login"> 
+            <input id="float-input" type="text" pInputText  [(ngModel)]="requestLogin.email"> 
             
         </div>
         <div class="p-col-12">
             <label style="margin: 4px;" for="float-input">Senha:  </label>
-            <p-password  [(ngModel)]="requestLogin.password"> Senha: </p-password>
+            <p-password  [(ngModel)]="requestLogin.senha"> Senha: </p-password>
         </div>
         <div class="p-col-12">
             <button (click)="doLogin()" 

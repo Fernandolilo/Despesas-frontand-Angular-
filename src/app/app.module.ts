@@ -10,6 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     CardModule,
     InputTextModule,
     ButtonModule,
