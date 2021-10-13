@@ -25,6 +25,6 @@ public error(message: string,): void{
     message: string, 
     icon: SweetAlertIcon
     ): void {
-      Swal.fire( message, icon);
+      Swal.fire(message, icon);
   }
 }

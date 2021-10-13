@@ -1,29 +1,31 @@
-
 <header>
+    <h1>corporate credit card control</h1>
+    <p>
+         Gestão de Despesas  
 
+    </p>
 </header>
 
 
 <main>   
-    
-        
-    
     <div class="login">
-        <div class="p-col-12">
+        <div>
             <h1>Despesas</h1>
             <i class="fas fa-comments-dollar fa-4x" style="color: rgb(3, 3, 177);"></i>
-            <p>Controle de despesas</p>
+          <H3>Controle de despesas</H3>
             <label for="float-input">Usuário</label>
-            <input id="float-input" type="text" pInputText  [(ngModel)]="requestLogin.email"> 
+            <input id="float-input" type="text" pInputText  [(ngModel)]="creds.email"> 
             
         </div>
-        <div class="p-col-12">
+        <div>
             <label style="margin: 4px;" for="float-input">Senha:  </label>
-            <p-password  [(ngModel)]="requestLogin.senha"> Senha: </p-password>
+            
+            <input [(ngModel)]="creds.senha" type="password" name="Senha" id="">
+           
         </div>
-        <div class="p-col-12">
+        <div>
             <button (click)="doLogin()" 
-              pButton type="button" label="Entrar" >
+              pButton type="button" label="" >Entrar
             </button>
         </div>
     </div>

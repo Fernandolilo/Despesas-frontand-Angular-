@@ -1,9 +1,9 @@
-import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RequestLogin } from 'src/app/resources/models/RequestLogin';
+import { CredenciaisDTO } from 'src/app/resources/models/CredenciaisDTO';
 import { AlertService } from 'src/app/resources/services/alert.service';
-import { LoginService } from 'src/app/resources/services/login.service';
+import { LoginService } from 'src/app/resources/services/loginService';
+
 
 
 @Component({
@@ -12,21 +12,26 @@ import { LoginService } from 'src/app/resources/services/login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  [x: string]: any;
 
-  public requestLogin: RequestLogin = new RequestLogin;
+  creds: CredenciaisDTO = {
+    email: "",
+    senha: ""
+  };
+
 
   constructor(
-    private loginService: LoginService, 
     private alertService: AlertService,
-    private router: Router
-    ) { }
+    private loginService: LoginService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
-    this.requestLogin;
+    this.creds;
   }
 
   public doLogin(): void{
-    this.loginService.doLogin(this.requestLogin)
+    this.loginService.doLogin(this.creds)
     .subscribe(data =>{
       this.router.navigate(['home']);
     },
@@ -36,3 +41,5 @@ export class LoginComponent implements OnInit {
     );
   }
 }
+
+
